@@ -1,10 +1,32 @@
-/* location.href = ""; LEVA PARA UMA URL EXTERNA*/ 
-
 const form = document.querySelector(".container") /*. se refere a classe/ #se refere a id*/
 
 const username = document.getElementById('user-rg')
 const password = document.getElementById('pass-rg')
 const confpassword = document.getElementById('pass-rg-conf')
+
+document.getElementById("remember-me").addEventListener("click", (event) => {
+
+    if(event.target.checked) {
+        password.setAttribute("type", "text");/* setAttribute() define o valor de um atributo no elemento.*/
+        confpassword.setAttribute("type", "text");
+    }else {
+        password.setAttribute("type", "password");
+        confpassword.setAttribute("type", "password");
+    }
+})
+
+
+username.addEventListener("blur", () => { /*quando o campo de usuário perder o foco, chama a função de validação.*/
+    validateUsername();
+});
+
+password.addEventListener("blur", () => {
+    validatepassword();
+});
+
+confpassword.addEventListener("blur", () => {
+    validateconfpassword();
+});
 
 
 form.addEventListener("submit", (event) => { /*adiciona um evento que responde  ao salvar do  formulário.*/
@@ -56,17 +78,14 @@ function successForm () {
     const isPassWordValid = validatepassword();
     const isConfPassValid = validateconfpassword();
     
-    if(isUsernameValid && isPassWordValid && isConfPassValid) {
+    if(isUsernameValid && isPassWordValid && isConfPassValid) { /*Se todos são verdadeiros*/
         console.log("Formulário enviado com sucesso!");
-    
-        location.href = "index.html"; /*redireciona para a página inicial.*/
         
+        alert("Registro Concluido com sucesso!")
+     location.href = "index.html"; /*redireciona para a página inicial.*/
+
     }
-
 }
-
-
-
 
 function errorinput(input, message) {   /*função que exibe a mensagem de erro.*/
     const parentinput = input.parentElement;   /*pega o elemento pai do elemento de entrada.*/
