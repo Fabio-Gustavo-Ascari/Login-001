@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="container">
+        <h1 class="login-title">LOGIN</h1>
+        
+        <section class="input-box">
+            <input type="text" name="username" placeholder="Usuário">
+            <i class="bx-user"></i> <!--Caso insira algum dado errado-->
+        </section>
+
+        <section class="input-box">
+            <input type="password"   name="password" placeholder="Senha">
+            <i class="bx-password"></i>
+        </section>
+
+        <section class="remember-box">
+            <div class="remember-me">
+                <input type="checkbox" name="remember-me" id="remember-me">
+                <label for="remember-me">
+                    <h5>Lembrar Senha</h5>
+                </label>
+            </div>
+
+            <a class="forgot-password" href="#">
+                <h5>Esqueceu a senha?</h5>
+            </a>
+        </section>
+
+        <button class="login-button" type="submit" onclick="login()">Login</button>
+
+        <h5 class="n-account">
+            Não tem uma conta?
+            <a href="register.html"><b>Register</b></a>
+        </h5>
+    
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="container">
+        <h1 class="login-title">REGISTRAR</h1>
+        
+        <section class="input-box">
+            <input type="text" name="username" placeholder="Usuário" id="user-rg">
+            <i class="bx-user"></i> <!--Caso insira algum dado errado-->
+        </section>
+
+        <section class="input-box">
+            <input type="password"   name="password" placeholder="Senha" id="pass-rg">
+            <i class="bx-password"></i>
+        </section>
+        
+        <section class="input-box">
+            <input type="password"   name="conf-password" placeholder=" Comfirmar Senha" id="pass-rg-conf">
+            <i class="bx-password"></i>
+        </section>
+
+        <section class="remember-box-rg">
+            <div class="remember-me-rg">
+                <input type="checkbox" name="remember-me-rg" id="remember-me">
+                <label>
+                    <h5>Mostrar Senha</h5>
+                </label>
+            </div>
+
+        </section>
+
+        <button class="save-button"  type="submit">Salvar</button>
+    
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
